@@ -5,6 +5,7 @@ import { BaseError } from "./config/error.js";
 import { status } from "./config/response.status.js";
 import { userRouter } from "./src/routes/user.route.js";
 import { reviewRouter } from "./src/routes/review.route.js";
+import { missionRouter } from "./src/routes/mission.route.js";
 import { specs } from "./config/swagger.config.js";
 import SwaggerUi from "swagger-ui-express";
 
@@ -24,7 +25,7 @@ app.use("/temp", tempRouter);
 app.use("/user", userRouter);
 
 // mission
-// app.use("/mission", missionRouter);
+app.use("/mission", missionRouter);
 
 // review
 app.use("/review", reviewRouter);
@@ -37,6 +38,7 @@ app.use("/api-docs", SwaggerUi.serve, SwaggerUi.setup(specs));
 app.use("./temp", tempRouter);
 app.use("./user", userRouter);
 app.use("./review", reviewRouter);
+app.use("./mission", missionRouter);
 
 // error handling
 // app.use((req, res, next) => {

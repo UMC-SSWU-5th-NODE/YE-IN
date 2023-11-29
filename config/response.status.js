@@ -90,4 +90,10 @@ export const status = {
     code: "STORE4001",
     message: "가게 존재하지 않음",
   },
+  ALREADY_CHALLENGING: {
+    status: StatusCodes.BAD_REQUEST,
+    isSuccess: false,
+    code: "STORE4001",
+    message: "이미 도전 중",
+  },
 };
