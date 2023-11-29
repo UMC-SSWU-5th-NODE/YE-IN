@@ -1,2 +1,4 @@
 .env
+# 캐시삭제했더니 .env gitignore 적용 됨
 node_modules
+swagger/

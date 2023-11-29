@@ -84,4 +84,10 @@ export const status = {
     code: "MEMBER4001",
     message: "파라미터 틀림",
   },
+  STORE_NOT_EXIST: {
+    status: StatusCodes.BAD_REQUEST,
+    isSuccess: false,
+    code: "STORE4001",
+    message: "가게 존재하지 않음",
+  },
 };
